@@ -21,5 +21,16 @@
 
 
 $(document).ready(function($) {
-$( "#datepicker,#datepicker1" ).datepicker();
+	$( "#datepicker,#datepicker1" ).datepicker();
+	var loc = window.location.href.split('/');
+	var page = loc[loc.length - 1];
+	if (page == 'rooms'){
+		$('#navigation_bar li a:first').removeClass("active");
+		$('#navigation_bar li a:eq(1)').addClass("active");
+	}
+	else
+	{
+		$('#navigation_bar li a:first').addClass("active");
+	}
+
 });
