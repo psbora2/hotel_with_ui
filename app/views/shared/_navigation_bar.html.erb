@@ -6,9 +6,19 @@
       </div>
       <div class="navigation" id = "navigation_bar">
          <span class="menu"></span> 
-          <ul class="navig">
+          <ul class="navig ">
             <li><a href="/"  class="active hvr-bounce-to-bottom">Home</a></li>
             <li><a href="/rooms" class="hvr-bounce-to-bottom">Rooms</a></li>
+            <% if user_signed_in? %>
+              <li>
+                <a class="hvr-bounce-to-bottom" ><%= current_user.email %></a>
+              </li>
+              <li><%= link_to 'Log out', destroy_user_session_path,class: "hvr-bounce-to-bottom", method: :delete %></li>
+              </li>
+            <% else %>
+               <li><a href="/users/sign_up" class="hvr-bounce-to-bottom"> Sign Up</a></li>
+               <li><a href="/users/sign_in" class="hvr-bounce-to-bottom"> Login</a></li>
+            <% end %>
           </ul>
       </div>
         <div class="clearfix"></div>

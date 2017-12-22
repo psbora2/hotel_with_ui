@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
   # GET /bookings
   # GET /bookings.json
   def index
