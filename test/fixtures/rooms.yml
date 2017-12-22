@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  rno: 1
+  room_type: 1
+
+two:
+  price: 1
+  rno: 1
+  room_type: 1

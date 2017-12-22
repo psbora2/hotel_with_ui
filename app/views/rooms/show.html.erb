@@ -1,0 +1,30 @@
+<div class="services">
+  <div class="container">
+		<div class="col-md-6 services-left">
+			<%= render "room_#{@room.room_type.to_i}"%>
+		</div>
+				<div class="col-md-6 services-right" style = "background-color: #ADD8E6;">
+			<%= render "bookings/form"%>
+		</div>
+	</div>
+</div>
+
+ <%= javascript_include_tag("jquery.flexslider")%>
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav : false,
+        width:240,
+        itemWidth: 0,
+        itemMargin:50,
+        slideshowSpeed:2000,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+    </script>

@@ -1,0 +1,53 @@
+  <div class="services">
+    <div class="container">
+      <div class="services-top heading">
+        <h3>Service categories</h3>
+      </div>
+      <div class="services-bottom">
+        <div class="col-md-6 services-left">
+          <%= render "room_0" %>
+          <%= render "room_1" %>
+        </div>
+        <div class="col-md-6 services-left">
+        <%= render "room_2" %>
+        <%= render "room_3" %>
+      
+    </div>
+  </div>
+  <!--end-services-->
+  <!--start-special-->
+  <div class="special">
+    <div class="container">
+      <div class="special-main">
+        <div class="col-md-6 special-left heading">
+          <h3>SPECIAL PROPOSITION</h3>
+        </div>
+        <div class="col-md-6 special-left">
+              <p>Appealing to leisure and business travelers who want to experience their destination cities like real locals, Airbnb offers a way to stay in unconventional lodging (often for less than their big brand hotel counterparts).
+               However, Airbnb’s value proposition is not economy accommodations. The benefit of using Airbnb is discovering the full richness of travel by being submerged in the local culture and new settings.</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!--end-special-->
+  <%= javascript_include_tag("jquery.flexslider")%>
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav : false,
+        width:240,
+        itemWidth: 0,
+        itemMargin:50,
+        slideshowSpeed:2000,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+    </script>
+  </div>

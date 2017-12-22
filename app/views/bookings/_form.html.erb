@@ -1,0 +1,58 @@
+        <h1>For Booking</h1>
+          <%= form_for(@booking) do |f| %>
+            <% if @booking.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+                <ul>
+                  <% @booking.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="bnr-one">
+              <div class="bnr-left">
+                <%= f.label :room_type %><br>
+              </div>
+              <div class="bnr-right">
+                <%= f.select :room_type, Booking.room_types %>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="bnr-one">
+              <div class="bnr-left">
+                <%= f.label :num_of_user, 'Adult' %><br>
+              </div>
+              <div class="bnr-right">
+                <%= f.select :num_of_user, {1 => 1, 2 => 2, 3 => 3, 4 => 4} %>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="bnr-one">
+              <div class="bnr-left">
+              <p>Check In</p>
+              </div>
+                <div class="bnr-right">
+                  <%= f.date_field :start_date, :id => "datepicker", :type => "text" %>
+                </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="bnr-one">
+              <div class="bnr-left">
+                <p>Check Out</p>
+              </div>
+              <div class="bnr-right">
+                <%= f.date_field :last_date, :id => "datepicker1", :type => "text" %>
+              </div>
+            <div class="clearfix"></div>
+            <div class="bnr-btn">
+              <%= f.submit %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end-banner-->

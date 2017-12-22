@@ -1,0 +1,31 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Booking Detail</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class=" col-md-12 col-lg-12 "> 
+        <table class="table table-user-information">
+          <tbody>
+            <tr>
+              <td>Room No</td>
+              <td><%= @booking.room.rno%></td>
+            </tr>
+            <tr>
+              <td>Check In </td>
+              <td><%= @booking.start_date%></td>
+            </tr>
+            <tr>
+              <td>Check Out </td>
+              <td><%= @booking.last_date%></td>
+            </tr>
+            <tr>
+              <td>Room Type </td>
+              <td><%= @booking.room.room_type%></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
