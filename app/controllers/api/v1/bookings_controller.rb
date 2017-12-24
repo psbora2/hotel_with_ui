@@ -1,5 +1,5 @@
-class Api::V1::BookingsController < ApplicationController
-
+class Api::V1::BookingsController < Api::V1::ApiController
+  before_action :authenticate_user!
 	def create
 		@booking = Booking.new(booking_params_with_date)
 		if @booking.save

@@ -7,17 +7,17 @@
               <li>
                 <div class="test-one">
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_0", size:"200")%>
+                    <%= link_to image_tag("room_0", size:"200"), new_booking_path(room_type:0)%>
                     <p>very good rooms.</p>
                     <h4>Deluxe Rooms - Queen Size Bed</h4>
                   </div>
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_1", size:"200")%>
+                    <%= link_to image_tag("room_1", size:"200"), new_booking_path(room_type:1)%>
                     <p>very good rooms.</p>
                     <h4>Luxury Rooms - Queen Size Bed and Pool Facing</h4>
                   </div>
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_2", size:"200")%>
+                    <%= link_to image_tag("room_2", size:"200"), new_booking_path(room_type:2)%>
                     <p>very good rooms.</p>
                     <h4>Luxury Suites - King Size Bed and Pool Facing</h4>
                   </div>
@@ -27,17 +27,17 @@
               <li>
                 <div class="test-one">
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_3", size:"200")%>
+                    <%= link_to image_tag("room_3", size:"200"), new_booking_path(room_type:3)%>
                     <p>very good rooms.</p>
                     <h4>Presidential Suites - King Size Bed, Pool Facing with a Gym</h4>
                   </div>
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_0", size:"200")%>
+                    <%= link_to image_tag("room_0_1", size:"200"), new_booking_path(room_type:0)%>
                     <p>very good rooms.</p>
                     <h4>Deluxe Rooms - Queen Size Bed</h4>
                   </div>
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_1", size:"200")%>
+                    <%= link_to image_tag("room_1_1", size:"200"), new_booking_path(room_type:1)%>
                     <p>very good rooms.</p>
                     <h4>Luxury Rooms - Queen Size Bed and Pool Facing</h4>
                   </div>
@@ -47,17 +47,17 @@
               <li>
                 <div class="test-one">
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_2_1", size:"200")%>
+                    <%= link_to image_tag("room_2_1", size:"200"), new_booking_path(room_type:2)%>
                     <p>very good rooms.</p>                    
                     <h4>Luxury Suites - King Size Bed and Pool Facing</h4>
                   </div>
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_3_1", size:"200")%>
+                    <%= link_to image_tag("room_3_1", size:"200"), new_booking_path(room_type:3)%>
                     <p>very good rooms.</p>
                     <h4>Presidential Suites - King Size Bed, Pool Facing with a Gym</h4>
                   </div>
                   <div class="col-md-4 test-left">
-                    <%= image_tag("room_1", size:"200")%>
+                    <%= link_to image_tag("room_1", size:"200"), new_booking_path(room_type:1)%>
                     <p>very good rooms.</p>
                     <h4>Luxury Rooms - Queen Size Bed and Pool Facing</h4>
                   </div>
@@ -71,19 +71,3 @@
     </div>
   </div>
   <!--end-test-->
-  <!--FlexSlider-->
-  <%= javascript_include_tag("jquery.flexslider")%>
-  <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-    </script>
-  </div>

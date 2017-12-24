@@ -1,19 +1,19 @@
 <div class="services-one">
-<section class="slider">
-  <div class="flexslider">
-    <ul class="slides">
-      <li>
-        <%= image_tag("room_3",class: "img-responsive", height: 300, width: 450)%>
-      </li>
-      <li>
-        <%= image_tag("room_3_1",class: "img-responsive", height: 300, width: 450)%>
-      </li>
-      <li>
-        <%= image_tag("room_3_2",class: "img-responsive", height: 300, width: 450)%>
-      </li>
-    </ul>
-    <div class="clearfix"></div>
-  </div>
+  <section class="slider">
+    <div class="flexslider flexslider-padding">
+      <ul class="slides">
+        <li>
+          <%= link_to image_tag("room_3",class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:3)%>
+        </li>
+        <li>
+          <%= link_to image_tag("room_3_1",class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:3)%>
+        </li>
+        <li>
+          <%= link_to image_tag("room_3_2",class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:3)%>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
   </section>
   <h4>Presidential Suites - King Size Bed, Pool Facing with a Gym</h4>
   <p>The Deluxe rooms are located on the upper floors, offering beautiful views of the city of São Paulo, a privilege offered by few hotels. Facilities are focused on guest comfort and functionality, and services to make your stay unforgettable.</p>
@@ -24,7 +24,5 @@
     <li><a href="#">King Size Bed</a></li>
     <li><a href="#">Swimming Pool</a></li>
   </ul>
-</div>
-</div>
-<div class="clearfix"></div>        
+  <div class="clearfix"></div>        
 </div>

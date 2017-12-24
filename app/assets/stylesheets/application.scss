@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 150px;
+
+  /* this needs to be bigger than footer height*/
+}
+
+.booking {
+  padding: 1.7em 0px;
+  text-align: center;
+  border: 0px;
+  position: relative;
+  zoom: 1;
+}

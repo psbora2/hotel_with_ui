@@ -1,18 +1,20 @@
 <div class="services-one">
-  <div class="flexslider">
-    <ul class="slides">
-      <li>
-        <%= image_tag("room_1", class: "img-responsive", height: 300, width: 450)%>
-      </li>
-      <li>
-        <%= image_tag("room_1_1", class: "img-responsive", height: 300, width: 450)%>
-      </li>
-      <li>
-        <%= image_tag("room_1_2",class: "img-responsive", height: 300, width: 450)%>
-      </li>
-    </ul>
-    <div class="clearfix"></div>
-  </div>
+  <section class="slider">
+    <div class="flexslider flexslider-padding">
+      <ul class="slides">
+        <li>
+          <%= link_to image_tag("room_1", class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:1)%>
+        </li>
+        <li>
+          <%= link_to image_tag("room_1_1", class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:1)%>
+        </li>
+        <li>
+          <%= link_to image_tag("room_1_2", class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:1)%>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </section>
   <h4>Luxury Rooms - Queen Size Bed and Pool Facing</h4>
   <p>The Deluxe rooms are located on the upper floors, offering beautiful views of the city of São Paulo, a privilege offered by few hotels. Facilities are focused on guest comfort and functionality, and services to make your stay unforgettable.</p>
 

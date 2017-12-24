@@ -1,14 +1,14 @@
 <div class="services-one">
-  <div class="flexslider">
+  <div class="flexslider flexslider-padding">
     <ul class="slides">
       <li>
-        <%= image_tag("room_2",class: "img-responsive", height: 300, width: 450)%>
+        <%= link_to image_tag("room_2",class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:2)%>
       </li>
       <li>
-        <%= image_tag("room_2_1",class: "img-responsive", height: 300, width: 450)%>
+        <%= link_to image_tag("room_2_1",class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:2)%>
       </li>
       <li>
-        <%= image_tag("room_2_2",class: "img-responsive", height: 300, width: 450)%>
+        <%= link_to image_tag("room_2_2",class: "img-responsive", height: 300, width: 450), new_booking_path(room_type:2)%>
       </li>
     </ul>
     <div class="clearfix"></div>

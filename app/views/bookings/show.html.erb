@@ -3,31 +3,11 @@
     <h1> You book this room<h1>
     <div class="col-md-6 services-left">
       <h3> Room Detail</h3>
-        <%= render "rooms/room_#{@room.room_type.to_i}"%>
+        <%= render "rooms/room_#{@room.room_type_int}"%>
     </div>
-    <div class="col-md-6 services-left">
+    <div class="col-md-6 services-right">
       <h3> Booking Detail</h3>
         <%= render "booking"%>
     </div>
   </div>
 </div>
-
- <%= javascript_include_tag("jquery.flexslider")%>
-  <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        directionNav : false,
-        width:240,
-        itemWidth: 0,
-        itemMargin:50,
-        slideshowSpeed:2000,
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-    </script>

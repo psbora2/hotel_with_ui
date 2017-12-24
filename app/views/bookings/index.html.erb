@@ -1,16 +1,27 @@
-<body>
-  <!--start-header-->
-  <div class="banner">
-    <div class="container">
-      <div class="banner-top">
-  			<%= render "form"%>
-  		</div>
-		</div>
-	</div>
-  <%= render "why"%>
-
-  <%= render "how" %>
-
-  <%= render "slider" %>
-
-</body>                                                                                                                                                  
+<div id="wrap">
+  <div id="main" class="container clear-top">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Room No</th>
+          <th>Start Date</th>
+          <th>Last Date</th>
+          <th>Guest</th>
+          <th> Show <th>
+        </tr>
+      </thead>
+      <% @bookings.each do |booking|%>
+        <tr>
+          <td> <%= booking.user.email %></td>
+          <td> <%= link_to booking.room.rno, booking %> </td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.last_date%></td>
+          <td><%= booking.num_of_user%></td>
+          <td> <%= link_to "show", booking %> </td>
+        </tr>  
+      <%end%>
+    </table>
+    <%=will_paginate @bookings%>
+  </div>
+</div>

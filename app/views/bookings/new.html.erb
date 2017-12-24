@@ -1,1 +1,10 @@
-<%= render 'form' %>
+<div class="services">
+  <div class="container">
+    <div class="col-md-6 services-left">
+      <%= render "rooms/room_#{@booking.room_type_int}"%>
+    </div>
+  	<div class="col-md-6 services-right" style = "background-color: #ADD8E6;">
+  		<%= render "bookings/form"%>
+  	</div>
+  </div>
+</div>
