@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :update, :destroy, :index, :show]
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:create, :update, :destroy, :index]
   # GET /bookings
   # GET /bookings.json
   def index
@@ -15,7 +15,11 @@ class BookingsController < ApplicationController
   # GET /bookings/1
   # GET /bookings/1.json
   def show
-    @room = @booking.room
+    if @room
+      @room = @booking.room
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /bookings/new
@@ -69,7 +73,7 @@ class BookingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
-      @booking = current_user.bookings.find(params[:id])
+      @booking = current_user.bookings.find_by_id(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
