@@ -10,7 +10,7 @@ class Api::V1::BookingsController < Api::V1::ApiController
 	end
 
 	def index
-		@bookings = Booking.all
+		@bookings = current_user.bookings
 		render json: @bookings
 	end
 
