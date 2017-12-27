@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   # GET /bookings/1
   # GET /bookings/1.json
   def show
-    if @room
+    if @booking
       @room = @booking.room
     else
       redirect_to root_path
@@ -73,6 +73,7 @@ class BookingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
+      debugger
       @booking = current_user.bookings.find_by_id(params[:id])
     end
 
