@@ -11,6 +11,8 @@
  hotel app show availability of room by passing booking date and room_type
 
  user can see his booked room and booking information
+ 
+ I wrote a post on elasticsearch - [ElasticSearch](https://medium.com/@pawansinghbora/how-we-managed-to-reduce-latency-on-our-elasticsearch-api-by-5-times-d8ec0f43c99f)
 
 
 # - Solution: 
