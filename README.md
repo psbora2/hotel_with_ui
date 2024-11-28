@@ -1,3 +1,7 @@
+# - Installation
+    docker-compose build
+    docker-compose up
+
 # - Create a rails application Hotel to book  Rooms.
 
  A Hotel  has many rooms.
