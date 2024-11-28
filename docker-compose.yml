@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      RAILS_ENV: development
+      APP_HOME: /app
+    stdin_open: true
+    tty: true
+    command:  >
+      bash -c "rm -f tmp/pids/server.pid &&
+               rake db:create &&
+               rake db:migrate &&
+               rake db:seed &&
+               rails server -b 0.0.0.0 -p 3000"

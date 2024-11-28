@@ -73,7 +73,6 @@ class BookingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
-      debugger
       @booking = current_user.bookings.find_by_id(params[:id])
     end
 

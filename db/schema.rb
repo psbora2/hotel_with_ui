@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20171222131705) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "bookings", force: :cascade do |t|
     t.integer  "room_type"
     t.integer  "user_id"
@@ -48,7 +45,7 @@ ActiveRecord::Schema.define(version: 20171222131705) do
     t.text     "tokens"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
