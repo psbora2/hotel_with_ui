@@ -1,26 +1,26 @@
-# Use an official Ruby runtime as a parent image
-FROM rails:4.2.5
+# Use an official Ruby image as the base
+FROM ruby:2.6
 
 # Set environment variables
-# ENV RAILS_ENV production
+ENV BUNDLE_PATH=/gems \
+    BUNDLE_BIN=/gems/bin \
+    PATH=/gems/bin:$PATH
+
+# Install system dependencies
+RUN apt-get update -qq && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    nodejs \
+    yarn
+
 ENV APP_HOME /app
 
-# # Install system dependencies
-# RUN apt-get update -qq && apt-get install -y \
-#   build-essential \
-#   libpq-dev \
-#   nodejs
 
 # Set the working directory inside the container
 WORKDIR $APP_HOME
 
 # Copy the Gemfile and Gemfile.lock into the container
-COPY Gemfile Gemfile.lock ./
-
-# Install Ruby dependencies
-# RUN gem install racc -v '1.8.1'
-# RUN bundle update nokogiri
-
+COPY Gemfile ./
 
 RUN ruby -v
 
